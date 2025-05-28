@@ -1,0 +1,82 @@
+CREATE TABLE empleados (
+  id SERIAL PRIMARY KEY,
+  nombre VARCHAR (50),
+  edad INTEGER,
+  departamento VARCHAR (50),
+  salario INTEGER
+);
+
+INSERT INTO empleados (id, nombre, edad, departamento, salario) VALUES
+(1, 'Ana Pérez', 30, 'Ventas', 2500),
+(2, 'Juan Ruíz', 45, 'Finanzas', 3200),
+(3, 'Laura Díaz', 25, 'Ventas', 2300),
+(4, 'Carlos Gill', 38, 'IT', 4000),
+(5, 'Marta León', 29, 'Finanzas', 3100);
+
+
+--1-  Mostrar el salario promedio por departamento
+/*
+SELECT departamento, AVG(salario) AS promedio_salario
+FROM empleados
+GROUP BY departamento
+*/
+
+--2- Contar cuantos empleados hay en cada departamento
+/*
+SELECT departamento, COUNT(id) AS cant_empleados
+FROM empleados
+GROUP BY departamento
+*/
+
+--3- Mostrar el salario maximo por departamento
+/*
+SELECT departamento, MAX(salario) AS salario_Departamento
+FROM empleados
+GROUP BY departamento
+*/
+
+--4- Listar los departamentos con salarios promedio mayor a 3000
+/*
+SELECT departamento, AVG(salario) AS salario_promedio
+FROM empleados
+GROUP BY departamento
+HAVING AVG(salario) > 3000
+*/
+
+
+
+
+
+--1- Mostrar a todos los empleados
+/*
+SELECT nombre
+FROM empleados
+*/
+
+--2- Listar los nombres y los salarios de los empleados del departamento de Finanzas
+/*
+SELECT nombre, salario
+FROM empleados
+WHERE departamento = 'Finanzas'
+*/
+
+--3- Mostrar a los empleados con salario mayor a 3000
+/*
+SELECT nombre
+FROM empleados
+WHERE salario > 3000
+*/
+
+--4- Listar los empleados ordenados por edad de mayor a menor
+/*
+SELECT nombre, edad
+FROM empleados
+ORDER BY edad ASC
+*/
+
+--5- Mostrar el nombre y edad de los empleados menores de 30 años
+/*
+SELECT nombre, edad
+FROM empleados
+WHERE edad < 30
+*/
