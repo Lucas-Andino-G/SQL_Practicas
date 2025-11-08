@@ -1,7 +1,7 @@
 CREATE TABLE movies (
   id INTEGER PRIMARY KEY,
   title TEXT NOT NULL,
-  year TEXT NOT NULL,
+  year INTEGER,
   estudio_id INTEGER
 );
 
@@ -15,7 +15,7 @@ INSERT INTO movies VALUES
 CREATE TABLE studios (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL,
-  year_founded TEXT NOT NULL
+  year_founded INTEGER
 );
 
 INSERT INTO studios VALUES
