@@ -132,3 +132,51 @@ INSERT INTO promo_codes VALUES
 (1, 'SAVEMORE'),
 (2, 'holidaysave'),
 (3, 'BuyToSave');
+--
+--
+--Tabla movies2
+CREATE TABLE movies2(
+  id INTEGER PRIMARY KEY,
+  title TEXT NOT NULL,
+  budget INTEGER,
+  genre TEXT NOT NULL
+);
+
+--Datos de la tabla movies2
+INSERT INTO movies2 VALUES
+(1, 'Home Alone', 18, 'comedy'),
+(2, 'Star Wars', 11, 'fantasy'),
+(3, 'Titanic', 200, 'drama'),
+(4, 'Avatar', 237, 'fantasy'),
+(5, 'Forrest Gump', 55, 'drama');
+--
+--
+--Tabla orders
+CREATE TABLE orders(
+  id INTEGER PRIMARY KEY,
+  product_id INTEGER,
+  quantity INTEGER
+);
+
+--Datos de la tabla orders
+INSERT INTO orders VALUES
+(1, 101, 4),
+(2, 102, 4),
+(3, 101, 6),
+(4, 102, 8);
+--
+--
+--Tabla products2
+CREATE TABLE products2(
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  category TEXT NOT NULL,
+  price DECIMAL
+);
+
+--Datos de la tabla products2
+INSERT INTO products2 VALUES
+(1, 'Apple', 'Fruit', 0.5),
+(2, 'Broccoli', 'Vegetable', 1.2),
+(3, 'Tomato', 'Vegetable', 0.7),
+(4, 'Banana', 'Fruit', 1);
