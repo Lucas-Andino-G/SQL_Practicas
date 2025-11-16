@@ -104,3 +104,18 @@ INSERT INTO products VALUES
 (1, 'Apple', 9),
 (2, 'Bread', 3),
 (3, 'Juice', 6);
+--
+--
+--Tabla sales2
+CREATE TABLE sales2(
+  id INTEGER PRIMARY KEY,
+  price INTEGER,
+  delivery INTEGER,
+  status TEXT NOT NULL
+);
+
+--Datos de la tabla sales2
+INSERT INTO sales2 VALUES
+(1, 10, 2, 'completed'),
+(2, 5, 4, 'completed'),
+(3, 3, 2, 'in progress');
