@@ -119,3 +119,16 @@ INSERT INTO sales2 VALUES
 (1, 10, 2, 'completed'),
 (2, 5, 4, 'completed'),
 (3, 3, 2, 'in progress');
+--
+--
+--Tabla promo_codes
+CREATE TABLE promo_codes(
+  id INTEGER PRIMARY KEY,
+  code TEXT NOT NULL
+);
+
+--Datos de la tabla promo_codes
+INSERT INTO promo_codes VALUES
+(1, 'SAVEMORE'),
+(2, 'holidaysave'),
+(3, 'BuyToSave');
