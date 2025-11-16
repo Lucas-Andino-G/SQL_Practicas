@@ -75,3 +75,32 @@ INSERT INTO comics VALUES
 (4, 'Spider-Man 2: The Next Chapter', 2015),
 (5, 'Spider-Man 3: Venom´s Revenge', 2017),
 (6, 'Spider-Man: A Hero Reborn', 2020);
+--
+--
+--Tabla songs
+CREATE TABLE songs(
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  category TEXT NOT NULL
+);
+
+--Datos de la tabla songs
+INSERT INTO songs VALUES
+(1, 'Shape of you', 'Pop'),
+(2, 'Stairway to Heaven', 'Rock'),
+(3, 'Take to five', 'Jazz'),
+(4, 'Symphony No.5', 'Classic');
+--
+--
+--Tabla products
+CREATE TABLE products(
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    price INTEGER
+);
+
+--Datos de la tabla products
+INSERT INTO products VALUES
+(1, 'Apple', 9),
+(2, 'Bread', 3),
+(3, 'Juice', 6);
